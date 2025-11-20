@@ -56,4 +56,17 @@ Para capturar os erros de design e interação, o STAMP exige que desenhemos uma
 
 A segurança é uma propriedade emergente controlada por essas restrições.
 
+\section{STPA: O método de Análise}
+
+O \textit{Systems-Theoretic Process Analysis} é a ferramenta usada para identificar as interações perigosas, ou seja, encontrar falhas nas ações de controle. Existem quatro maneiras de uma ação de controle ser insegura (UCA - Unsafe Control Action):
+
+\begin{enumerate}
+	\item \textbf{Não fornecer} uma ação de controle quando ela é necessária.
+	\item \textbf{Fornecer} a ação de controle quando ela \textbf{não} é segura (ou não é necessária).
+	\item Fornecer uma ação de controle \textbf{muito cedo, muito tarde ou fora de sequência.}
+	\item Parar a ação de controle \textbf{muito cedo} ou \textbf{aplicá-la por muito tempo}.
+\end{enumerate}
+
+O STPA funciona em passos lógicos: Definir o propósito, modelar a estrutura de controle, identificar UCAs e cenários causais.
+
 \printbibliography[heading=subbibliography]
