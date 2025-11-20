@@ -2,7 +2,7 @@
 MAIN = main
 
 # Comando padrão
-all: pdf
+all: bib
 
 # Compilação simples em PDF
 pdf:
@@ -12,13 +12,13 @@ pdf:
 # Compilação completa incluindo bibliografia (caso use BibTeX)
 bib:
 	pdflatex $(MAIN).tex
-	bibtex $(MAIN)
+	biber $(MAIN)
 	pdflatex $(MAIN).tex
 	pdflatex $(MAIN).tex
 
 # Remoção de arquivos temporários
 clean:
-	rm -f *.aux *.log *.out *.toc *.bbl *.blg *.lof *.lot *.fls *.fdb_latexmk
+	rm -f *.aux *.log *.out *.toc *.bbl *.blg *.lof *.lot *.fls *.fdb_latexmk *.bcf *.run.xml
 
 # Remove tudo, menos o PDF
 cleanall: clean
