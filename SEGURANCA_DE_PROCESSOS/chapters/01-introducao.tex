@@ -1,12 +1,59 @@
 \chapter{Introdução - STAMP}
 
-\begin{definition}{Teste}
-	
-Um teste unitário é algo que testa uma unidade de código
-	
+O conceito central do \textit{Systems-Theoretic Accident Model and Processes} (STAMP) é: Segurança não é um problema de confiabilidade de componentes, mas sim um problema de \textbf{controle} \cite{Leveson2012_ESW}. Portanto, acidentes ocorrem quando falhas de componentes, perturbações externas ou interações disfuncionais não são adequadamente \textbf{controladas}.
+
+\begin{definition}[Confiabilidade]
+	Probabilidade de que um componente (ou sistema) satisfaça seus requisitos comportamentais esperados ao longo do tempo e sob determinadas condições. Ou seja, é a ausência de falhas em relação à especificação.
 \end{definition}
 
+\begin{definition}[Segurança]
+	Ausência de acidentes, tal que um acidente é um evento envolvendo uma perda inaceitável e não planejada.
+\end{definition}
 
-O conceito central do \textit{Systems-Theoretic Accident Model and Processes} (STAMP) é: Segurança não é um problema de confiabilidade de componentes, mas sim um problema de \textbf{controle} \cite{Leveson2012_ESW}.
+No STAMP, acidentes acontecem quando o sistema de controle falha em import as \textbf{restrições de segurança} necessárias sobre o comportamento dos componentes.
+
+Para aplicar o STAMP, deve-se enxergar o sistema como uma hierarquia de loops de feedback (controle).
+
+Todo controlador (software, operador humano, PID) precisa de cinco coisas para ser eficaz:
+
+\begin{enumerate}
+	\item \textbf{Objetivo (Goal)}: As restrições de segurança a serem mantidas.
+	\item \textbf{Ações de Controle (Action)}: Capacidade de afetar o processo por meio de atuadores.
+	\item \textbf{Modelo do Processo (Model)}: Uma representação interna do estado atual do processo.
+	\item \textbf{Observabilidade (Feedback)}: Sensores ou informações que atualizam o modelo do processo.
+	\item \textbf{Algoritmo de Controle}: Mecanismo de tomada de decisão, ou lógica, utilizada por um controlador para determinar quais ações de controle devem ser tomadas com base no estado atual do sistema.
+\end{enumerate}
+
+Os conceitos se aplicam tanto a máquinas quanto pessoas, mas com uma distinção importante:
+
+\begin{itemize}
+	\item \textbf{Controladores Automatizados}: O algoritmo consiste nos procedimentos e lógicas projetados pelos engenheiros. Tipicamente é estático, a menos que seja atualizado periodicamente.
+	\item \textbf{Controladores Humanos}: O algoritmo consiste nos procedimentos operacionais, treinamentos e regras mentais que o operador usa. Diferentemente da automação, os humanos empregam algoritmos de controle dinâmicos, que eles alteram e adaptam com o tempo com base no feedback, na experiência e em mudanças de objetivos (por exemplo, sob pressão de tempo).
+\end{itemize}
+
+\begin{definition}[Acidente (Loss)]
+	Um evento indesejado e não planejado que resulta em uma perda. Isso inclui perda de vida humana, ferimentos, dano à propriedade, poluição ambiental, perda de missão, perda financeira, etc...
+\end{definition}
+
+\begin{definition}[Perigo (Hazard)]
+	Um estado do sistema ou conjunto de condições que, juntamente com um conjunto específico de condições do ambiente (no pior caso), levará a um acidente. 
+\end{definition}
+
+\textit{O perigo é algo sobre o qual o projetista tem controle, diferente do acidente final que depende de fatores ambientais}. 
+
+Para capturar os erros de design e interação, o STAMP exige que desenhemos uma estrutura de controle hierárquica ao invés de um P\&ID. Nesta estrutura, visualizamos o sistema como níveis de controle, onde cada nível impõe restrições ao nível abaixo dele. 
+
+\begin{itemize}
+	\item \textbf{Nível Superior}: Gerência, engenharia, regulamentações.
+	\item \textbf{Nível Médio}: Controladores automáticos (PLCs e Sensores) e operadores humanos.
+	\item \textbf{Nível Inferior}: O processo físico (válvulas, reator).
+\end{itemize}
+
+
+\begin{definition}[Restrições de Segurança]
+	Limites impostos ao comportamento do sistema e seus componentes para garantir que o sistema não entre em estados de perigo.
+\end{definition}
+
+A segurança é uma propriedade emergente controlada por essas restrições.
 
 \printbibliography[heading=subbibliography]
