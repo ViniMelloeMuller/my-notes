@@ -1,0 +1,86 @@
+\RequireVersions{
+  *{application}{luaTeX}  {0000/00/00 v1.22.0}
+  *{format} {LaTeX2e}     {2025-11-01 v2.e}
+  *{package}{snapshot}    {2020/06/17 v2.14}
+  *{class}  {report}      {2025/01/22 v1.4n}
+  *{file}   {size10.clo}  {2025/01/22 v1.4n}
+  *{file}   {preamble.tex}{0000/00/00 v0.0}
+  *{package}{amsmath}     {2025/07/09 v2.17z}
+  *{package}{amstext}     {2024/11/17 v2.01}
+  *{package}{amsgen}      {1999/11/30 v2.0}
+  *{package}{amsbsy}      {1999/11/29 v1.2d}
+  *{package}{amsopn}      {2022/04/08 v2.04}
+  *{package}{amssymb}     {2013/01/14 v3.01}
+  *{package}{amsfonts}    {2013/01/14 v3.01}
+  *{package}{amsthm}      {2020/05/29 v2.20.6}
+  *{package}{babel}       {2025/11/09 v25.15}
+  *{file}   {babel-brazilian.tex}{0000/00/00 v0.0}
+  *{file}   {brazilian.ldf}{0000/00/00 v0.0}
+  *{package}{csquotes}    {2024-04-04 v5.2o}
+  *{package}{etoolbox}    {2025/10/02 v2.5m}
+  *{package}{keyval}      {2022/05/29 v1.15}
+  *{file}   {csquotes.def}{2024-04-04 v5.2o}
+  *{file}   {csquotes.cfg}{0000/00/00 v0.0}
+  *{package}{fontspec}    {2025/09/29 v2.9g}
+  *{package}{xparse}      {2025-10-09 v3}
+  *{package}{expl3}       {2025-11-06 v3}
+  *{file}   {l3backend-luatex.def}{2025-10-09 v3}
+  *{package}{fontspec-luatex}{2025/09/29 v2.9g}
+  *{package}{fontenc}     {0000/00/00 v0.0}
+  *{file}   {fontspec.cfg}{0000/00/00 v0.0}
+  *{package}{graphicx}    {2024/12/31 v1.2e}
+  *{package}{graphics}    {2024/08/06 v1.4g}
+  *{package}{trig}        {2023/12/02 v1.11}
+  *{file}   {graphics.cfg}{2016/06/04 v1.11}
+  *{file}   {luatex.def}  {2025/09/29 v1.2f}
+  *{package}{float}       {2001/11/08 v1.3d}
+  *{package}{setspace}    {2022/12/04 v6.7b}
+  *{package}{biblatex}    {2025/07/10 v3.21}
+  *{package}{pdftexcmds}  {2020-06-27 v0.33}
+  *{package}{infwarerr}   {2019/12/03 v1.5}
+  *{package}{iftex}       {2024/12/12 v1.0g}
+  *{package}{ltxcmds}     {2023-12-04 v1.26}
+  *{package}{kvoptions}   {2022-06-15 v3.15}
+  *{package}{kvsetkeys}   {2022-10-05 v1.19}
+  *{package}{logreq}      {2010/08/04 v1.0}
+  *{file}   {logreq.def}  {2010/08/04 v1.0}
+  *{package}{ifthen}      {2024/03/16 v1.1e}
+  *{package}{url}         {2013/09/16 v3.4}
+  *{file}   {blx-dm.def}  {2025/07/10 v3.21}
+  *{file}   {blx-unicode.def}{0000/00/00 v0.0}
+  *{file}   {blx-compat.def}{2025/07/10 v3.21}
+  *{file}   {biblatex.def}{2025/07/10 v3.21}
+  *{file}   {standard.bbx}{2025/07/10 v3.21}
+  *{file}   {numeric.bbx} {2025/07/10 v3.21}
+  *{file}   {numeric.cbx} {2025/07/10 v3.21}
+  *{file}   {biblatex.cfg}{0000/00/00 v0.0}
+  *{package}{blx-case-expl3}{2025/07/10 v3.21}
+  *{package}{hyperref}    {2025-07-12 v7.01o}
+  *{package}{kvdefinekeys}{2019-12-19 v1.6}
+  *{package}{pdfescape}   {2019/12/09 v1.15}
+  *{package}{hycolor}     {2020-01-27 v1.10}
+  *{package}{nameref}     {2025-06-21 v2.57}
+  *{package}{refcount}    {2019/12/15 v3.6}
+  *{package}{gettitlestring}{2019/12/15 v1.6}
+  *{package}{stringenc}   {2019/11/29 v1.12}
+  *{file}   {pd1enc.def}  {2025-07-12 v7.01o}
+  *{package}{intcalc}     {2019/12/15 v1.3}
+  *{file}   {puenc.def}   {2025-07-12 v7.01o}
+  *{package}{bitset}      {2019/12/09 v1.3}
+  *{package}{bigintcalc}  {2019/12/15 v1.5}
+  *{file}   {hluatex.def} {2025-07-12 v7.01o}
+  *{package}{rerunfilecheck}{2025-06-21 v1.11}
+  *{package}{uniquecounter}{2019/12/15 v1.4}
+  *{file}   {umsa.fd}     {2013/01/14 v3.01}
+  *{file}   {umsb.fd}     {2013/01/14 v3.01}
+  *{-------}{Document-specific files:}{----}
+  *{file}   {supp-pdf.mkii}{0000/00/00 v0.0}
+  *{package}{epstopdf-base}{2020-01-24 v2.11}
+  *{file}   {epstopdf-sys.cfg}{2010/07/13 v1.3}
+  *{file}   {brazilian.lbx}{2025/07/10 v3.21}
+  *{file}   {main.bbl}    {0000/00/00 v0.0}
+  *{file}   {main.out}    {0000/00/00 v0.0}
+  *{file}   {main.out}    {0000/00/00 v0.0}
+  *{file}   {chapters/00-fundamentos.tex}{0000/00/00 v0.0}
+  *{file}   {chapters/01-introducao.tex}{0000/00/00 v0.0}
+}
