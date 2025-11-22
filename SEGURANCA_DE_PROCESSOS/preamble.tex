@@ -1,14 +1,15 @@
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 
-\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fontspec}
+\babelfont{rm}{Noto sans}
 
 \usepackage{graphicx}
 \usepackage{float}
 
 \usepackage{setspace}
-\usepackage{hyperref}
 
 \usepackage[backend=biber, refsection=chapter]{biblatex}
 \addbibresource{ref.bib}
@@ -18,5 +19,10 @@
 
 \onehalfspacing
 
-\newtheorem{definition}{Definição}
+\newtheorem{definition}{Definição}[chapter]
 
+% % Configuração de Títulos
+% \titleformat{\chapter}[display]
+%   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\usepackage{hyperref}

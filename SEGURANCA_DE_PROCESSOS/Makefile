@@ -1,20 +1,23 @@
 # Nome do arquivo principal (sem extensão)
 MAIN = main
 
+# Engine
+ENGINE = lualatex
+
 # Comando padrão
 all: bib
 
 # Compilação simples em PDF
 pdf:
-	pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
+	$(ENGINE) $(MAIN).tex
+	$(ENGINE) $(MAIN).tex
 
 # Compilação completa incluindo bibliografia (caso use BibTeX)
 bib:
-	pdflatex $(MAIN).tex
+	$(ENGINE) $(MAIN).tex
 	biber $(MAIN)
-	pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
+	$(ENGINE) $(MAIN).tex
+	$(ENGINE) $(MAIN).tex
 
 # Remoção de arquivos temporários
 clean:
