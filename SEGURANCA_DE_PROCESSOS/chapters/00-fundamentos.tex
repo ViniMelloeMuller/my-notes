@@ -1,0 +1,96 @@
+\chapter{Fundamentos da Engenharia de Segurança em Processos Industriais}
+
+\section{Introdução}
+Tirado diretamente de \cite{Leveson2023}.
+
+A segurança em processos químicos industriais não é meramente a aplicação de dispositivos de proteção ou a conformidade com normas regulatórias; é uma disciplina de engenharia dedicada ao controle de perigos em sistemas complexos. Antes de estudar metodologias específicas de análise de risco, é imperativo compreender a natureza dos acidentes, a distinção entre falhas de componentes e comportamentos sistêmicos, e os modelos de causalidade que fundamentam todas as ferramentas de segurança modernas.
+
+Em instalações químicas, onde altas pressões, temperaturas extremas e substâncias tóxicas ou inflamáveis estão presentes, a energia armazenada no sistema é imensa. A engenharia de segurança, portanto, foca em garantir que essa energia e esses materiais permaneçam contidos ou sejam transformados de maneira controlada, prevenindo perdas inaceitáveis.
+
+\section{Conceitos Fundamentais e Definições Formais}
+
+Para estabelecer uma base sólida, devemos definir formalmente os conceitos que permeiam toda a literatura de segurança de processos. Estas definições baseiam-se na teoria de sistemas e distinguem-se do uso coloquial dos termos.
+
+\begin{definition}[Acidente / Perda]
+Um evento indesejado e não planejado que resulta em uma perda inaceitável. As perdas podem incluir fatalidades, lesões humanas, danos à propriedade, danos ambientais, perda de missão ou prejuízos financeiros.
+\end{definition}
+
+No contexto industrial, um vazamento de gás tóxico, uma explosão de um reator ou a contaminação de um lençol freático são exemplos clássicos de acidentes. Note que o acidente é o \textit{desfecho} final.
+
+\begin{definition}[Perigo (Hazard)]
+Um estado do sistema ou conjunto de condições que, juntamente com um conjunto específico de condições ambientais (no pior caso), levará inevitavelmente a um acidente.
+\end{definition}
+
+A distinção entre perigo e acidente é crucial. O perigo é um estado sobre o qual os engenheiros de processo têm controle direto (ex: "pressão no vaso acima da pressão de projeto" ou "válvula de alívio bloqueada"). O acidente (ex: "explosão do vaso") depende de fatores ambientais que podem estar fora do controle do projeto (ex: presença de uma fonte de ignição ou presença de operadores na área). O objetivo da segurança é eliminar ou controlar os perigos para que eles não evoluam para acidentes.
+
+\begin{definition}[Risco]
+A combinação da probabilidade de ocorrência de um perigo e a severidade do acidente potencial (perda) que poderia resultar desse perigo.
+\end{definition}
+
+Muitas metodologias tradicionais focam na quantificação do risco, tentando calcular probabilidades de falha. No entanto, em sistemas complexos, a incerteza sobre essas probabilidades pode ser alta.
+
+\begin{definition}[Segurança]
+A ausência de acidentes ou, mais precisamente, a propriedade de um sistema que garante que ele não entrará em estados de perigo inaceitáveis.
+\end{definition}
+
+\section{A Dicotomia: Confiabilidade vs. Segurança}
+
+Um dos erros conceituais mais comuns na engenharia industrial é confundir confiabilidade (\textit{reliability}) com segurança (\textit{safety}). Embora relacionadas, são propriedades sistêmicas distintas e, por vezes, conflitantes.
+
+\begin{definition}[Confiabilidade]
+A probabilidade de que um componente ou sistema desempenhe sua função especificada, sob condições determinadas e por um período de tempo específico, sem falhas.
+\end{definition}
+
+É possível ter um sistema altamente confiável que é inseguro, e um sistema seguro que é pouco confiável.
+
+\begin{itemize}
+    \item \textbf{Sistema Confiável mas Inseguro:} Considere uma bomba química projetada para transferir ácido a uma taxa constante. Se a bomba continuar operando (sem falhar) mesmo quando o tanque de destino estiver transbordando, ela é altamente confiável (cumpriu sua função de bombear), mas o sistema é inseguro (causou um vazamento).
+    \item \textbf{Sistema Seguro mas Não-Confiável:} Um reator químico equipado com múltiplos sensores sensíveis que desligam o processo (shutdown) ao menor sinal de ruído. O sistema raramente completa um lote de produção (baixa confiabilidade), mas nunca explode (alta segurança).
+\end{itemize}
+
+Em sistemas complexos, muitos acidentes ocorrem sem que nenhum componente tenha falhado mecanicamente; o acidente emerge das interações normais e funcionais entre componentes que operam conforme projetados, mas cujo comportamento conjunto foi imprevisto.
+
+\section{Modelos de Causalidade de Acidentes}
+
+A forma como investigamos e prevenimos acidentes depende inteiramente do \textit{modelo de causalidade} que adotamos — ou seja, como acreditamos que os acidentes acontecem.
+
+\subsection{O Modelo de Cadeia de Eventos Linear}
+
+O modelo tradicional, que fundamenta a maioria das técnicas clássicas de análise, assume que os acidentes são o resultado de uma cadeia linear de eventos: o Componente A falha, o que causa a falha do Componente B, que leva ao acidente.
+
+Sob esta ótica, a prevenção foca em:
+\begin{enumerate}
+    \item Prevenir a falha do componente individual (aumentar a confiabilidade).
+    \item Adicionar barreiras de proteção entre os eventos da cadeia para "quebrar" a sequência.
+\end{enumerate}
+
+Este modelo introduz conceitos fundamentais para métodos analíticos:
+\begin{itemize}
+    \item \textbf{Causa Raiz:} A premissa de que existe um evento inicial único ou primordial.
+    \item \textbf{Barreiras de Proteção (Layers of Protection):} Mecanismos independentes (diques, válvulas de segurança, procedimentos) desenhados para impedir a propagação da falha.
+\end{itemize}
+
+Embora útil para falhas mecânicas simples, este modelo tem dificuldades em explicar acidentes causados por erros de software, interações humanas complexas ou decisões gerenciais, onde não há uma "quebra" física linear.
+
+\subsection{O Modelo Sistêmico}
+
+Com o aumento da complexidade e da automação na indústria química, surgiu a necessidade de modelos baseados na Teoria de Sistemas. Neste paradigma:
+
+\begin{itemize}
+    \item A segurança é tratada como uma \textbf{propriedade emergente} do sistema. Ela não reside em uma válvula ou em um operador, mas surge das interações entre eles.
+    \item Acidentes não são vistos apenas como falhas de componentes, mas como problemas de \textbf{controle}. O sistema de segurança falhou em impor as restrições necessárias (ex: manter a temperatura abaixo de $100^\circ$C) sobre o comportamento dos componentes.
+\end{itemize}
+
+Esta abordagem muda o foco da engenharia de "prevenir que coisas quebrem" para "impor restrições de segurança através de hierarquias de controle". Isso exige definir claramente:
+\begin{itemize}
+    \item As restrições de segurança do sistema.
+    \item Quem ou o que (controladores humanos ou automáticos) é responsável por manter essas restrições.
+    \item Como a informação (feedback) flui pelo sistema para permitir a tomada de decisão correta.
+\end{itemize}
+
+\section{Conclusão do Capítulo}
+
+A compreensão moderna da segurança de processos exige transitar entre o detalhe do componente e a visão holística do sistema. Enquanto métodos tradicionais buscam desvios em variáveis de processo (fluxo, pressão) e falhas de equipamentos, a abordagem sistêmica busca falhas nas interações e no controle. Ambos dependem de definições claras de perigo, risco e das restrições que o sistema deve respeitar para operar dentro de um envelope seguro.
+
+
+\printbibliography[heading=subbibliography]
