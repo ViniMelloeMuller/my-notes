@@ -11,6 +11,15 @@ Em instalações químicas, onde altas pressões, temperaturas extremas e subst�
 
 Para estabelecer uma base sólida, devemos definir formalmente os conceitos que permeiam toda a literatura de segurança de processos. Estas definições baseiam-se na teoria de sistemas e distinguem-se do uso coloquial dos termos.
 
+\begin{definition}[Sistema]
+Um sistema é um conjunto de objetos, conhecidos como componentes desse sistema, que atuam juntos como um todo para atingir um determinado objetivo. É uma abstração, i.e, são construidos pela mente humana para dar propósito aos componentes.
+\end{definition}
+
+Sistemas possuem as seguintes propriedades: 1. Os obejtivos de um sistema podem ser claramente bem definidos; 2. Sistemas são atomísticos, i.e, eles podem ser separados em componentes que interagem direta ou indiretamente; e 3. Recursividade: sistemas são divisíveis em subsistemas, que por si só são sistemas.
+
+Sistemas possuem \textbf{Estados}, que são propriedades que caracterizam o sistema em qualquer momento. Enquanto o \textbf{Ambiente} é o conjunto de componentes que não fazem parte do sistema porem seu comportamento pode afetá-lo diretamente.
+
+
 \begin{definition}[Acidente / Perda]
 Um evento indesejado e não planejado que resulta em uma perda inaceitável. As perdas podem incluir fatalidades, lesões humanas, danos à propriedade, danos ambientais, perda de missão ou prejuízos financeiros.
 \end{definition}
@@ -33,6 +42,13 @@ Muitas metodologias tradicionais focam na quantificação do risco, tentando cal
 A ausência de acidentes ou, mais precisamente, a propriedade de um sistema que garante que ele não entrará em estados de perigo inaceitáveis.
 \end{definition}
 
+A engenharia de segurança de sistemas começa no momento em que as perdas forem definidas e os perigos relacionados, identificados. A \textbf{Análise de Perigos} envolve a identificação de cenários que descrevem condições nas quais o sistema passa a ser inseguro. Perigos são totalmente removidos quando:
+
+\begin{enumerate}
+	\item Eliminando os estados perigosos da operação do sistema;
+	\item Eliminando as perdas associadas com aquele estado;
+\end{enumerate}
+
 \section{A Dicotomia: Confiabilidade vs. Segurança}
 
 Um dos erros conceituais mais comuns na engenharia industrial é confundir confiabilidade (\textit{reliability}) com segurança (\textit{safety}). Embora relacionadas, são propriedades sistêmicas distintas e, por vezes, conflitantes.
@@ -49,6 +65,15 @@ A probabilidade de que um componente ou sistema desempenhe sua função especifi
 \end{itemize}
 
 Em sistemas complexos, muitos acidentes ocorrem sem que nenhum componente tenha falhado mecanicamente; o acidente emerge das interações normais e funcionais entre componentes que operam conforme projetados, mas cujo comportamento conjunto foi imprevisto.
+
+\subsection{Projeto de Sistemas}
+Um design ou projeto de um sistema deve seguir uma hierarquia de definições:
+
+\begin{enumerate}
+	\item \textbf{Objetivos}: A razão da construção do sistema;
+	\item \textbf{Requisitos}: Os obejtivos específicos em termos de declarações concretas e verificáveis;
+	\item \textbf{Restrições}: As maneiras aceitáveis em que os objetivos e requisitos podem ser atingidos.
+\end{enumerate}
 
 \section{Modelos de Causalidade de Acidentes}
 
